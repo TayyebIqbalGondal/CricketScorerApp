@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="280dp">
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="180sp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team A"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginLeft="10dp"
+                android:textSize="30sp"
+                android:textColor="#616161"
+                />
+            <LinearLayout
+                android:layout_marginTop="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:id="@+id/show_scores"
+                android:layout_marginLeft="30sp"
+                android:text="0/"/>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="#000000"
+                    android:id="@+id/out_team_a"
+                    android:text="0"/>
+            </LinearLayout>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:layout_marginLeft="10sp"
+                android:id="@+id/team_a_balls"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="10dp"
+                android:text="Overs:0.0"/>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#2f4f8f"
+                android:layout_marginLeft="30sp"
+                android:id="@+id/show_position_a"
+                android:layout_marginBottom="10dp"
+                android:text="-----"/>
+
+        </LinearLayout>
+
+        <View
+
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray">
+        </View>
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="180sp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team B"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginLeft="10dp"
+                android:textSize="30sp"
+                android:textColor="#616161"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="#000000"
+                    android:id="@+id/show_scores_b"
+                    android:layout_marginLeft="30sp"
+                    android:text="0/"/>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="#000000"
+                    android:id="@+id/out_team_b"
+                    android:text="0"/>
+            </LinearLayout>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="20sp"
+                android:id="@+id/team_b_balls"
+                android:layout_marginBottom="10dp"
+                android:text="Overs:0.0"/>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#2f4f8f"
+                android:layout_marginLeft="30sp"
+                android:id="@+id/show_position_b"
+                android:layout_marginBottom="10dp"
+                android:text="-----"/>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-light"
+                android:id="@+id/need"
+                android:text=""/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray">
+    </View>
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginTop="20sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="#000000"
+            android:layout_marginBottom="10dp"
+            android:text="Total Overs:"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:onClick="incrementTotalOvers"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:onClick="decrementTotalOvers"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_margin="20sp"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="#000000"
+            android:id="@+id/total_overs"
+            android:text="0"/>
+    </LinearLayout>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray">
+    </View>
+
+    <LinearLayout
+        android:layout_marginLeft="7sp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+0"
+            android:onClick="addZeroToTeam"
+            android:textSize="30dp"
+            android:textStyle="normal" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+1"
+            android:onClick="addOneToTeam"
+            android:textSize="30dp"
+            android:textStyle="normal" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+4"
+            android:onClick="addFourToTeam"
+            android:textSize="30dp"
+            android:textStyle="normal" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+6"
+            android:textSize="30dp"
+            android:onClick="addSixToTeam"
+            android:textStyle="normal" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="7sp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+2"
+            android:onClick="addTwoToTeam"
+            android:textSize="30dp"
+            android:textStyle="normal" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+3"
+            android:onClick="addThreeToTeam"
+            android:textSize="30dp"
+            android:textStyle="normal" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UNDO"
+            android:textSize="25dp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OUT"
+            android:onClick="addOutTeamA"
+            android:textSize="30dp"
+            android:textStyle="normal" />
+    </LinearLayout>
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:text="Reset"
+        android:onClick="Reset"
+        android:textSize="30dp"
+        android:textStyle="normal" />
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray">
+    </View>
+
+</LinearLayout>
